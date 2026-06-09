@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">MAG01Y26</string>
+    <string name="greeting">Hello %1$s</string>
+    <string name="BMI">BMI Classification:</string>
+    <string name="activity">active</string>
+    <string name="smoking">non smoker</string>
+    <string name="drinking">heavy drinker</string>
+    <string name="Activity_level">Activity Level</string>
+    <string name="Smoking_Habits">Smoking Habits</string>
+    <string name="Drinking_Habits">Drinking Habits</string>
+    <string name="Life_Simulation">Life Expectancy Simulation</string>
+    <string name="Years">%2$s</string>
+    <string name="presetting">(Activity, Smoking and Drinking Levels are set according to your records)</string>
+    <string name="Activity_Level_Slider">Activity Level</string>
+    <string name="Smoking_Level_Slider">Smoking Level</string>
+    <string name="Alcohol_Level_Slider">Drinking Level</string>
+    <string name="Sleep_Level_Slider">Sleep Quality</string>
+    <string name="Eating_Level_Slider">Healthy Eating</string>
+    <string name="Mental_Level_Slider">Mental Health</string>
+
+
+
+
+
+
+</resources>

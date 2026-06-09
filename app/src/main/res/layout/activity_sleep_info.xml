@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F9FA"
+    android:fitsSystemWindows="true">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomNavigationBar"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp">
+
+
+                    <TextView
+                        android:id="@+id/btn_sleep"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:text="Sleep"
+                        android:textColor="#212529"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/tab_style_selected" />
+
+
+                    <TextView
+                        android:id="@+id/btn_fitness"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="-25dp"
+                        android:text="Fitness"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:background="@drawable/tab_gray" />
+
+
+                    <TextView
+                        android:id="@+id/btn_nutrition"
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="-25dp"
+                        android:text="Nutrition"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:background="@drawable/tab_gray" />
+
+
+                    <TextView
+                        android:id="@+id/btn_mental_health"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="-25dp"
+                        android:text="Mental health"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:background="@drawable/tab_gray" />
+
+
+                    <TextView
+                        android:id="@+id/btn_smoking"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="-25dp"
+                        android:text="Smoking"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:background="@drawable/tab_gray" />
+
+
+                    <TextView
+                        android:id="@+id/btn_alcohol"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="-25dp"
+                        android:text="Alcohol"
+                        android:textColor="#555555"
+                        android:gravity="center"
+                        android:textSize="12sp"
+                        android:background="@drawable/tab_gray" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:padding="16dp"
+                android:elevation="1dp"
+                android:layout_marginBottom="20dp">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="@android:color/white"
+                    app:cardCornerRadius="0dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@android:color/black"
+                    app:strokeWidth="1.5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Consistency: Go to bed and wake up at the same time every day, even on weekends.\n\nEnvironment: Keep your bedroom cool (around 65°F/18°C), dark, and quiet.\n\nThe 30-Minute Rule: If you can't fall asleep after 20-30 minutes, get out of bed and do something boring in low light until you feel sleepy.\n\nDigital Detox: Turn off screens (phones, tablets, TVs) at least 30–60 minutes before bed to avoid 'blue light' which suppresses sleep hormones."
+                        android:textColor="#212529"
+                        android:textSize="14sp"
+                        android:lineSpacingMultiplier="1.2"
+                        android:padding="16dp" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/link1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sleep tips: 6 steps to better sleep"
+                android:textColor="#1A0DAB"
+                android:textSize="15sp"
+                android:autoLink="all"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/link2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Mastering Sleep Hygiene: Your Path to Quality Sleep"
+                android:textColor="#1A0DAB"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/link3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Fall asleep faster and sleep better"
+                android:textColor="#1A0DAB"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/link4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="20 Tips for Better Sleep When You Have Insomnia"
+                android:textColor="#1A0DAB"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/link5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="The Harvard Sleep Trick"
+                android:textColor="#1A0DAB"
+                android:textSize="15sp"
+                android:layout_marginBottom="12dp" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_blue_divider" />
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/btnHeart"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_simulation"
+            android:contentDescription="Simulation" />
+
+        <ImageView
+            android:id="@+id/btnInfo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_info_selected"
+            android:contentDescription="Info" />
+
+        <ImageView
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+
+</RelativeLayout>

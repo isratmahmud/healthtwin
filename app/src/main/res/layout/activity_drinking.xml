@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F8F9FA">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Drinking Habit"
+        android:textColor="#212529"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="How often do you drink?"
+        android:textColor="#495057"
+        android:textSize="16sp" />
+
+    <RadioGroup
+        android:id="@+id/rgHabits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbNever"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Never"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="#212529"/>
+
+        <RadioButton
+            android:id="@+id/rbOccasionally"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Occasionally"
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:textColor="#212529"/>
+
+        <RadioButton
+            android:id="@+id/rb30_60"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="1 - 5 Drinks a day"
+            android:textColor="#212529"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb61_120"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:padding="8dp"
+            android:text="6 - 10 Drinks a day"
+            android:textColor="#212529"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rb120_180"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="10+ Drinks a day"
+            android:textColor="#212529"
+            android:textSize="16sp" />
+
+    </RadioGroup>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="0dp">
+
+        <ImageView
+            android:id="@+id/ivInfographic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_drinking"
+            android:contentDescription="Activity_drinking"/>
+    </androidx.cardview.widget.CardView>
+    <include layout="@layout/layout_blue_divider" />
+    <LinearLayout
+        android:id="@+id/bottomNavigationBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:elevation="8dp"
+        android:weightSum="5">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back" />
+
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home_selected"
+            android:contentDescription="Home" />
+
+        <ImageView
+            android:id="@+id/btnHeart"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_simulation"
+            android:contentDescription="Simulation" />
+
+        <ImageView
+            android:id="@+id/btnInfo"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_info"
+            android:contentDescription="Info" />
+
+        <ImageView
+            android:id="@+id/btnProfile"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_profile"
+            android:contentDescription="Profile" />
+    </LinearLayout>
+</LinearLayout>
