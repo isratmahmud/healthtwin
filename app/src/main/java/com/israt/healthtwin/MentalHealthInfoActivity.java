@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class MentalHealthInfoActivity extends AppCompatActivity {
     //
@@ -17,6 +20,8 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
     TextView mentalHealth_link4;
     TextView mentalHealth_link5;
 
+    private UserData loggedInUser;
+
 
 
     @Override
@@ -25,12 +30,22 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_mental_health_info);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.mentalXML), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(v.getPaddingStart() + systemBars.left, v.getPaddingTop()
+                    + systemBars.top, v.getPaddingEnd()
+                    + systemBars.right, v.getPaddingBottom() + systemBars.bottom);
+            return insets;
+        });
+
         //tab buttons
         TextView btnSleep = findViewById(R.id.btn_sleep);
         TextView btnFitness = findViewById(R.id.btn_fitness);
         TextView btnNutrition = findViewById(R.id.btn_nutrition);
         TextView btnSmoking = findViewById(R.id.btn_smoking);
         TextView btnAlcohol = findViewById(R.id.btn_alcohol);
+
+        loggedInUser = (UserData) getIntent().getSerializableExtra("USER_OBJECT");
 
         // links
         mentalHealth_link1 = findViewById(R.id.link1);
@@ -45,6 +60,7 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MentalHealthInfoActivity.this, SleepInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -53,6 +69,7 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MentalHealthInfoActivity.this, FitnessInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -61,6 +78,7 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MentalHealthInfoActivity.this, NutritionInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -69,6 +87,7 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MentalHealthInfoActivity.this, SmokingInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -77,6 +96,7 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MentalHealthInfoActivity.this, AlcoholInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -129,6 +149,43 @@ public class MentalHealthInfoActivity extends AppCompatActivity {
                 String url = "https://www.psych-doctor.com/post/how-can-i-manage-anxiety-in-a-high-paced-world-in-2026";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+
+        findViewById(R.id.btnHeart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MentalHealthInfoActivity.this, SimulationActivity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MentalHealthInfoActivity.this, Dashboard_Activity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnProfile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MentalHealthInfoActivity.this, UserProfileUpdateActivity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });

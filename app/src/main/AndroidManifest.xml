@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -48,12 +49,27 @@
             android:name=".Dashboard_Activity"
             android:exported="false" />
         <activity
-            android:name=".bmi_data"
+            android:name=".UserProfileUpdateActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+
+        <activity
+            android:name=".UserProfileCreateActivity"
+            android:windowSoftInputMode="adjustResize"
+            android:exported="false" />
+        <activity
+            android:name=".bmi_dataActivity"
             android:exported="false" />
         <activity
             android:name=".SleepInfoActivity"
             android:exported="false" />
-        <activity android:name=".Simulation" android:exported="false" />
+        <activity
+            android:name=".SmokingAttentionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HealthAttentionActivity"
+            android:exported="false" />
+        <activity android:name=".SimulationActivity" android:exported="false" />
     </application>
 
 </manifest>

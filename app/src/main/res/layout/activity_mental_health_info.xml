@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FA"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:id="@+id/mentalXML">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                         android:id="@+id/btn_sleep"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
-                        android:text="Sleep"
+                        android:text="@string/Sleep"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -48,7 +49,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Fitness"
+                        android:text="@string/Fitness"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -59,7 +60,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Nutrition"
+                        android:text="@string/Nutrition"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -71,7 +72,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Mental health"
+                        android:text="@string/Mental_Health"
                         android:textColor="#212529"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -83,7 +84,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Smoking"
+                        android:text="@string/Smoking_tab"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -95,7 +96,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Alchohol"
+                        android:text="@string/Alcohol"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -129,11 +130,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="The 5-4-3-2-1 Grounding Technique: To calm anxiety, identify 5 things you see, 4 you can touch, 3 you hear, 2 you can smell, and 1 you can taste. \n\n Digital Boundaries: Set a tech-free hour before bed to reduce comparison-itus and the impact of negative news cycles. \n\nSocial Connection: Even a 5-minute phone call with a friend can significantly lower cortisol levels."
-                        android:textColor="#212529"
-                        android:textSize="14sp"
                         android:lineSpacingMultiplier="1.2"
-                        android:padding="16dp" />
+                        android:padding="16dp"
+                        android:text="@string/Mental_Info"
+                        android:textColor="#212529"
+                        android:textSize="14sp" />
 
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -143,7 +144,7 @@
                 android:id="@+id/link1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Caring your mental health"
+                android:text="@string/Caring_Mental_health"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:autoLink="all"
@@ -153,7 +154,7 @@
                 android:id="@+id/link2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Tips for better mental health"
+                android:text="@string/Tips"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -162,7 +163,7 @@
                 android:id="@+id/link3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="9 Ways to Help You Stay Mentally Healthy"
+                android:text="@string/Nine_Ways"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -171,7 +172,7 @@
                 android:id="@+id/link4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Manage Stress: Health and Wellbeing Tips"
+                android:text="@string/manage_stress"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -180,7 +181,7 @@
                 android:id="@+id/link5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Coping with Stress: Strategies for 2026"
+                android:text="@string/coping"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />

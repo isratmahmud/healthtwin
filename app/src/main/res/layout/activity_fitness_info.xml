@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FA"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:id="@+id/fitnessXML">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                         android:id="@+id/btn_sleep"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
-                        android:text="Sleep"
+                        android:text="@string/Sleep"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -48,7 +49,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Fitness"
+                        android:text="@string/Fitness"
                         android:textColor="#212529"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -60,7 +61,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Nutrition"
+                        android:text="@string/Nutrition"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -71,19 +72,18 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Mental health"
-                        android:textColor="#555555"
+                        android:background="@drawable/tab_gray"
                         android:gravity="center"
-                        android:textSize="12sp"
-                        android:background="@drawable/tab_gray" />
-
+                        android:text="@string/Mental_Health"
+                        android:textColor="#555555"
+                        android:textSize="12sp" />
 
                     <TextView
                         android:id="@+id/btn_smoking"
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Smoking"
+                        android:text="@string/Smoking_tab"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -95,7 +95,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Alcohol"
+                        android:text="@string/Alcohol"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -129,11 +129,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Aerobic: Aim for at least 150 mins of moderate activity (brisk walking) or 75 mins of vigorous activity (running). \n\nStrength: Target all major muscle groups at least 2 days a week. \n\nRecovery: Treat rest days as appointments to allow your muscles to repair."
-                        android:textColor="#212529"
-                        android:textSize="14sp"
                         android:lineSpacingMultiplier="1.2"
-                        android:padding="16dp" />
+                        android:padding="16dp"
+                        android:text="@string/Fitness_Info"
+                        android:textColor="#212529"
+                        android:textSize="14sp" />
 
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -143,7 +143,7 @@
                 android:id="@+id/link1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Fitness Training: Elements of a Well-Rounded Routine"
+                android:text="@string/fitness_training"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:autoLink="all"
@@ -153,7 +153,7 @@
                 android:id="@+id/link2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Physical Activity Recommendations for Adults"
+                android:text="@string/physical_activity"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -162,7 +162,7 @@
                 android:id="@+id/link3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Beginner's Guide to Developing an Exercise Routine"
+                android:text="@string/beginners_guide"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -171,7 +171,7 @@
                 android:id="@+id/link4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8 Exercises to Add to Your 2026 Fitness Routine"
+                android:text="@string/fitness_routine"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -180,7 +180,7 @@
                 android:id="@+id/link5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Strength Training: A Beginner's Guide to Getting Stronger"
+                android:text="@string/strength_training"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />

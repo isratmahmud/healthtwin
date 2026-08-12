@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FA"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:id="@+id/smoking_infoXML">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                         android:id="@+id/btn_sleep"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
-                        android:text="Sleep"
+                        android:text="@string/Sleep"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -48,7 +49,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Fitness"
+                        android:text="@string/Fitness"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -59,7 +60,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Nutrition"
+                        android:text="@string/Nutrition"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -71,7 +72,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Mental health"
+                        android:text="@string/Mental_Health"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -83,7 +84,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Smoking"
+                        android:text="@string/Smoking_tab"
                         android:textColor="#212529"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -95,7 +96,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Alcohol"
+                        android:text="@string/Alcohol"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -129,11 +130,11 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Consistency: Go to bed and wake up at the same time every day, even on weekends.\n\nEnvironment: Keep your bedroom cool (around 65°F/18°C), dark, and quiet.\n\nThe 30-Minute Rule: If you can't fall asleep after 20-30 minutes, get out of bed and do something boring in low light until you feel sleepy.\n\nDigital Detox: Turn off screens (phones, tablets, TVs) at least 30–60 minutes before bed to avoid 'blue light' which suppresses sleep hormones."
-                        android:textColor="#212529"
-                        android:textSize="14sp"
                         android:lineSpacingMultiplier="1.2"
-                        android:padding="16dp" />
+                        android:padding="16dp"
+                        android:text="@string/Smoking_Info"
+                        android:textColor="#212529"
+                        android:textSize="14sp" />
 
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
@@ -143,7 +144,7 @@
                 android:id="@+id/link1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sleep tips: 6 steps to better sleep"
+                android:text="Effects of smoking and tobacco"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:autoLink="all"
@@ -153,7 +154,7 @@
                 android:id="@+id/link2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Mastering Sleep Hygiene: Your Path to Quality Sleep"
+                android:text="What is smoking?"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -171,7 +172,7 @@
                 android:id="@+id/link4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="20 Tips for Better Sleep When You Have Insomnia"
+                android:text="A Comprehensive Review on the Impacts of Smoking on the Health of an Individual"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -180,7 +181,7 @@
                 android:id="@+id/link5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="The Harvard Sleep Trick"
+                android:text="Effects of tobacco on health"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />

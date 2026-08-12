@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 public class AlcoholInfoActivity extends AppCompatActivity {
     //
@@ -17,6 +20,8 @@ public class AlcoholInfoActivity extends AppCompatActivity {
     TextView alcohol_link4;
     TextView alcohol_link5;
 
+    private UserData loggedInUser;
+
 
 
     @Override
@@ -25,12 +30,22 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_alcohol_info);
 
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.alcohol_infoXML), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(v.getPaddingStart() + systemBars.left, v.getPaddingTop()
+                    + systemBars.top, v.getPaddingEnd()
+                    + systemBars.right, v.getPaddingBottom() + systemBars.bottom);
+            return insets;
+        });
+
         //tab buttons
         TextView btnSleep = findViewById(R.id.btn_sleep);
         TextView btnFitness = findViewById(R.id.btn_fitness);
         TextView btnNutrition = findViewById(R.id.btn_nutrition);
         TextView btnMentalHealth = findViewById(R.id.btn_mental_health);
         TextView btnSmoking = findViewById(R.id.btn_smoking);
+
+        loggedInUser = (UserData) getIntent().getSerializableExtra("USER_OBJECT");
 
         // links
         alcohol_link1 = findViewById(R.id.link1);
@@ -45,6 +60,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlcoholInfoActivity.this, SleepInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -53,6 +69,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlcoholInfoActivity.this, FitnessInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -61,6 +78,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlcoholInfoActivity.this, NutritionInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -69,6 +87,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlcoholInfoActivity.this, MentalHealthInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -77,6 +96,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(AlcoholInfoActivity.this, SmokingInfoActivity.class);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });
@@ -86,7 +106,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         alcohol_link1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.mayoclinic.org/healthy-lifestyle/adult-health/in-depth/sleep/art-20048379";
+                String url = "https://www.niaaa.nih.gov/alcohols-effects-health/alcohols-effects-body";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -96,7 +116,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         alcohol_link2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.sleepfoundation.org/sleep-hygiene";
+                String url = "https://www.mayoclinic.org/diseases-conditions/alcohol-use-disorder/symptoms-causes/syc-20369243";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -106,7 +126,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         alcohol_link3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.nhs.uk/every-mind-matters/mental-wellbeing-tips/how-to-fall-asleep-faster-and-sleep-better/";
+                String url = "https://www.nhs.uk/live-well/alcohol-advice/the-risks-of-drinking-too-much/";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -116,7 +136,7 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         alcohol_link4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://www.webmd.com/sleep-disorders/ss/slideshow-sleep-tips";
+                String url = "https://www.cdc.gov/alcohol/about-alcohol-use/index.html";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
                 startActivity(intent);
@@ -126,9 +146,46 @@ public class AlcoholInfoActivity extends AppCompatActivity {
         alcohol_link5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String url = "https://timesofindia.indiatimes.com/life-style/health-fitness/health-news/harvard-sleep-trick-why-socks-help-you-fall-asleep-faster-and-improve-your-sleep-quality/articleshow/123991760.cms";
+                String url = "https://www.betterhealth.vic.gov.au/health/healthyliving/how-alcohol-affects-your-body";
                 Intent intent = new Intent(Intent.ACTION_VIEW);
                 intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnBack).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                getOnBackPressedDispatcher().onBackPressed();
+            }
+        });
+
+        findViewById(R.id.btnHeart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AlcoholInfoActivity.this, SimulationActivity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnHome).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AlcoholInfoActivity.this, Dashboard_Activity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.btnProfile).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AlcoholInfoActivity.this, UserProfileUpdateActivity.class);
+                //intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.putExtra("USER_OBJECT", loggedInUser);
                 startActivity(intent);
             }
         });

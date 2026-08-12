@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F9FA"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:id="@+id/nutritionXML">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -37,7 +38,7 @@
                         android:id="@+id/btn_sleep"
                         android:layout_width="100dp"
                         android:layout_height="40dp"
-                        android:text="Sleep"
+                        android:text="@string/Sleep"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -48,7 +49,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Fitness"
+                        android:text="@string/Fitness"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:background="@drawable/tab_gray" />
@@ -59,7 +60,7 @@
                         android:layout_width="100dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Nutrition"
+                        android:text="@string/Nutrition"
                         android:textColor="#212529"
                         android:textStyle="bold"
                         android:gravity="center"
@@ -71,7 +72,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Mental health"
+                        android:text="@string/Mental_Health"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -83,7 +84,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Smoking"
+                        android:text="@string/Smoking_tab"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -95,7 +96,7 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp"
                         android:layout_marginLeft="-25dp"
-                        android:text="Alcohol"
+                        android:text="@string/Alcohol"
                         android:textColor="#555555"
                         android:gravity="center"
                         android:textSize="12sp"
@@ -129,7 +130,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Color your plate: Aim for at least three different colors of vegetables at dinner to ensure a variety of phytonutrients. \n\nFiber first: Choose whole grains (brown rice, oats) over white/refined grains to keep blood sugar stable. \n\nHydration: Often, thirst is mistaken for hunger. Drink a glass of water 20 minutes before a meal to see if you are actually hungry."
+                        android:text="@string/Nutrition_Info"
                         android:textColor="#212529"
                         android:textSize="14sp"
                         android:lineSpacingMultiplier="1.2"
@@ -143,7 +144,7 @@
                 android:id="@+id/link1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Healthy Eating Plate"
+                android:text="@string/Healthy_Eating"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:autoLink="all"
@@ -153,7 +154,7 @@
                 android:id="@+id/link2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dietary Guidelines for Americans"
+                android:text="@string/dietary"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -162,7 +163,7 @@
                 android:id="@+id/link3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8 Tips for Eating Well"
+                android:text="@string/well_eating"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -171,7 +172,7 @@
                 android:id="@+id/link4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="How to Cut Back on Ultra-Processed Foods"
+                android:text="@string/processed_food"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />
@@ -180,7 +181,7 @@
                 android:id="@+id/link5"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Understanding Nutrition Labels"
+                android:text="@string/Nutrition_label"
                 android:textColor="#1A0DAB"
                 android:textSize="15sp"
                 android:layout_marginBottom="12dp" />

@@ -5,13 +5,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#F8F9FA">
+    android:background="#F8F9FA"
+    android:id="@+id/exerciseXML">
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Activity Habits"
+        android:text="@string/Activity_level"
         android:textColor="#212529"
         android:textSize="26sp"
         android:textStyle="bold"
@@ -21,80 +22,101 @@
         android:id="@+id/tvSubtitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="How often are you active?"
+        android:text="@string/activity_question"
         android:textColor="#495057"
         android:textSize="16sp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="24dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <RadioGroup
         android:id="@+id/rgHabits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:dividerPadding="0dp"
+        android:showDividers="none"
         android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/rbNever"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Never"
+            android:text="@string/label_never"
             android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
             android:id="@+id/rbOccasionally"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Occasionally"
+            android:text="@string/occasionally"
             android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
             android:id="@+id/rb30_60"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="30 - 60 minutes a week"
+            android:text="@string/M30_60"
             android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
             android:id="@+id/rb61_120"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="61 - 120 minutes a week"
+            android:text="@string/M61_120"
             android:textSize="16sp"
-            android:padding="8dp"
-            android:checked="true"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
             android:id="@+id/rb120_180"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="120 - 180 minutes a week"
+            android:text="@string/M120"
             android:textSize="16sp"
-            android:padding="8dp"
-            android:textColor="#212529"/>
-
-        <RadioButton
-            android:id="@+id/rb180_plus"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="180+ minutes a week"
-            android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
     </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#007BFF"
+            android:text="@string/update"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#6C757D"
+            android:text="@string/cancel"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp">
 
@@ -103,10 +125,11 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/ic_activity_guideline"
+            android:src="@drawable/ic_activity"
             android:contentDescription="Activity guideline infographic"/>
     </androidx.cardview.widget.CardView>
-    <include layout="@layout/layout_blue_divider" />
+
+      <include layout="@layout/layout_blue_divider" />
     <LinearLayout
         android:id="@+id/bottomNavigationBar"
         android:layout_width="match_parent"

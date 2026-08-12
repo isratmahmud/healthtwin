@@ -5,14 +5,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#F8F9FA">
+    android:background="#F8F9FA"
+    android:id="@+id/activity_drinkingXML">
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Drinking Habit"
+        android:text="@string/Drinking_Habits"
         android:textColor="#212529"
         android:textSize="26sp"
         android:textStyle="bold" />
@@ -23,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="24dp"
-        android:text="How often do you drink?"
+        android:text="@string/drinking_question"
         android:textColor="#495057"
         android:textSize="16sp" />
 
@@ -31,62 +32,92 @@
         android:id="@+id/rgHabits"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:dividerPadding="0dp"
+        android:showDividers="none"
         android:orientation="vertical">
 
         <RadioButton
             android:id="@+id/rbNever"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Never"
+            android:text="@string/label_never"
             android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
             android:id="@+id/rbOccasionally"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Occasionally"
+            android:text="@string/occasionally"
             android:textSize="16sp"
-            android:padding="8dp"
+            android:layout_marginTop="-4dp"
             android:textColor="#212529"/>
 
         <RadioButton
-            android:id="@+id/rb30_60"
+            android:id="@+id/rb1_5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="1 - 5 Drinks a day"
+            android:layout_marginTop="-4dp"
+            android:text="@string/D1_5"
             android:textColor="#212529"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/rb61_120"
+            android:id="@+id/rb6_10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:padding="8dp"
-            android:text="6 - 10 Drinks a day"
+            android:layout_marginTop="-4dp"
+            android:text="@string/D6_10"
             android:textColor="#212529"
             android:textSize="16sp" />
 
         <RadioButton
-            android:id="@+id/rb120_180"
+            android:id="@+id/rb10_plus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="10+ Drinks a day"
+            android:layout_marginTop="-4dp"
+            android:text="@string/D10"
             android:textColor="#212529"
             android:textSize="16sp" />
 
     </RadioGroup>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="#007BFF"
+            android:text="@string/update"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="#6C757D"
+            android:text="@string/cancel"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginTop="24dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="0dp">
 
